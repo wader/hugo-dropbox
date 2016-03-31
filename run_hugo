@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ ! -d "/app/Dropbox/$DROPBOX_FOLDER" ] ; then
+  echo "Ignoring, no \"$DROPBOX_FOLDER\" folder exists yet"
+  exit 0
+fi
+
+rm -rf "/app/public.temp"
+if ! /app/go/bin/hugo -s "/app/Dropbox/$DROPBOX_FOLDER" -d "/app/public.temp" ; then
+  exit 0
+fi
+
+rm -rf "/app/public"
+mv "/app/public.temp" "/app/public"
