@@ -9,7 +9,7 @@ hugo files.
 
 First start a container:
 ```
-docker run --rm -ti -e DROPBOX_FOLDER="hugo test" -p 8080:8080 test
+docker run --rm -e DROPBOX_FOLDER="hugo test" -p 8080:8080 test
 ```
 After a while you will see log messages from dropboxd:  
  ```
