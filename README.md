@@ -13,7 +13,7 @@ docker run --rm -ti -e DROPBOX_FOLDER="hugo test" -p 8080:80 test
 ```
 After a while you will see log messages from dropboxd:  
  ```
- This computer isn't linked to any Dropbox account...
+This computer isn't linked to any Dropbox account...
 Please visit https://www.dropbox.com/cli_link_nonce?nonce=.... to link this device.
  ```
 Visit the link in a browser logged in with the dropbox account you want to
