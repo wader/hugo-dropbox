@@ -40,4 +40,4 @@ and share a collaborative folder with it. That way it does not sync and have
 access to your other files.
 
 To preserve dropbox configuration and data i suggest letting docker-compose
-take care of it or create a data only container and use `-volumes-from`.  
+take care of it or create a data only container and use `--volumes-from`.
