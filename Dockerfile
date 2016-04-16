@@ -19,6 +19,8 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN \
+  wget -O - "https://github.com/krallin/tini/releases/download/v0.9.0/tini" > /usr/local/bin/tini && \
+  chmod a+x /usr/local/bin/tini && \
   wget -O - "https://github.com/cortesi/modd/releases/download/v0.2/modd-0.2-linux64.tgz" | tar xfz - && \
   mv tmp/modd-0.2-linux64/modd /usr/local/bin && \
   rm -rf tmp && \
@@ -35,4 +37,4 @@ USER nobody
 
 VOLUME ["/app/.dropbox", "/app/Dropbox"]
 EXPOSE 8080
-CMD ["/usr/local/bin/modd"]
+CMD ["/usr/local/bin/tini", "--", "/usr/local/bin/modd"]
