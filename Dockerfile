@@ -8,10 +8,8 @@ ENV LC_ALL="en_US.UTF-8"
 
 RUN DEBIAN_FRONTEND=noninteractive \
   apt-get update && \
-  apt-get -y install \
-    wget \
-    locales \
-    nginx
+  apt-get -y install wget locales nginx && \
+  apt-get clean
 
 # make sure utf-8 works in filenames etc
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
