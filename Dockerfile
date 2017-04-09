@@ -19,14 +19,14 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN \
-  wget -O - "https://github.com/krallin/tini/releases/download/v0.13.2/tini" > /usr/local/bin/tini && \
+  wget -O - "https://github.com/krallin/tini/releases/download/v0.14.0/tini" > /usr/local/bin/tini && \
   chmod a+x /usr/local/bin/tini && \
   wget -O - "https://github.com/cortesi/modd/releases/download/v0.4/modd-0.4-linux64.tgz" | tar xfz - && \
   mv modd-0.4-linux64/modd /usr/local/bin && \
   rm -rf tmp && \
-  wget -O - "https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz" | tar xfz - && \
-  mv hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 /usr/local/bin/hugo && \
-  rm -rf hugo_0.18.1_linux_amd64 && \
+  wget -O - "https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19_Linux-64bit.tar.gz" | tar xfz - && \
+  mv hugo_0.19_linux_amd64/hugo_0.19_linux_amd64 /usr/local/bin/hugo && \
+  rm -rf hugo_0.19_linux_amd64 && \
   wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - -C /app
 
 RUN mkdir -p /app/.dropbox /app/Dropbox
