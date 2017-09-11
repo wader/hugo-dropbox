@@ -19,7 +19,7 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN \
-  wget -O - "https://github.com/krallin/tini/releases/download/v0.14.0/tini" > /usr/local/bin/tini && \
+  wget -O - "https://github.com/krallin/tini/releases/download/v0.16.1/tini" > /usr/local/bin/tini && \
   chmod a+x /usr/local/bin/tini && \
   wget -O - "https://github.com/cortesi/modd/releases/download/v0.4/modd-0.4-linux64.tgz" | tar xfz - && \
   mv modd-0.4-linux64/modd /usr/local/bin && \
