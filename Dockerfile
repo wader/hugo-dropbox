@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch-slim
 MAINTAINER Mattias Wadman mattias.wadman@gmail.com
 
 ENV DROPBOX_FOLDER="site"
